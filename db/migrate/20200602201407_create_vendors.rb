@@ -1,16 +1,15 @@
-class CreateVisitors < ActiveRecord::Migration[6.0]
+class CreateVendors < ActiveRecord::Migration[6.0]
   def change
-    create_table :visitors do |t|
-      t.string :first_name
-      t.string :last_name
+    create_table :vendors do |t|
+      t.string :name
+      t.integer :phone_number 
       t.string :street_address
       t.string :city
       t.string :state
       t.integer :zipcode
-      t.integer :phone_number
       t.string :email
-      t.string :gender
-      t.integer :age
+      t.string :website
+      t.string :vendor_type
 
       t.belongs_to :event, foreign_key: true
 
