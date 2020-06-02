@@ -8,7 +8,7 @@ class CreateEvents < ActiveRecord::Migration[6.0]
       t.integer :zipcode
       t.integer :opening_time
       t.integer :closing_time
-      t.DATE :event_date
+      t.date :event_date
 
       t.timestamps
     end
